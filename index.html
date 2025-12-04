@@ -21,6 +21,18 @@
             },
             animation: {
               'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fadeIn 1s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
             }
           },
         },
@@ -51,10 +63,16 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #d4162e;
       }
+      
+      /* Utilities for animation delays */
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-500 { animation-delay: 500ms; }
     </style>
 
 <link rel="stylesheet" href="/index.css">
-<script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -62,13 +80,12 @@
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
     "vite": "https://aistudiocdn.com/vite@^7.2.6",
     "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-DVzLjbkr.js"></script>
+  <script type="module" crossorigin src="/assets/index-q4yW0kHh.js"></script>
 </head>
   <body>
     <div id="root"></div>
